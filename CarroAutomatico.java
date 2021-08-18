@@ -22,7 +22,7 @@ public class CarroAutomatico extends Carro {
 	@Override 
 	public void ligar() {
 		if(pressionoufreio) {
-			ligado = !ligado;
+			super.ligar();
 		}
 	}
 	

@@ -22,7 +22,7 @@ public class MotoPartidaPedal extends Moto {
 	@Override 
 	public void ligar() {
 		if(puxaacelerador) {
-			ligado = !ligado;
+			super.ligar();
 		}
 	}
 
