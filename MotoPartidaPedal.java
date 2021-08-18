@@ -2,10 +2,11 @@ package src;
 
 public class MotoPartidaPedal extends Moto {
 
-	private boolean puxouacelerador;
+	private boolean puxaacelerador;
 	
 	public MotoPartidaPedal(String placa, int velocidade, int aceleracao, boolean automatico, int topspeed) {
 		super(placa, velocidade, aceleracao, automatico, true, topspeed);
+		puxaacelerador = false;
 	}
 	
 	@Override
@@ -20,7 +21,14 @@ public class MotoPartidaPedal extends Moto {
 	
 	@Override 
 	public void ligar() {
-		
+		if(puxaacelerador) {
+			ligado = !ligado;
+		}
 	}
+
+	public void puxaacelerador() {
+		puxaacelerador = !puxaacelerador;
+	}
+	
 	
 }
